@@ -7,6 +7,13 @@ const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 const User = require("./model/user");
 const axios = require("axios");
+const cors = require("cors");
+
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 
 // const { TOKEN_KEY } = process.env;
 
@@ -95,6 +102,11 @@ app.post("/login", async (req, res) => {
   } catch (err) {
     return res.status(400).send("Invalid Credentials");
   }
+});
+
+app.get("/users", async (req, res) => {
+  const users = await User.find();
+  return res.status(200).json(users);
 });
 
 module.exports = app;
