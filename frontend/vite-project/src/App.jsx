@@ -10,6 +10,10 @@ import ListGroup from "react-bootstrap/ListGroup";
 import Button from "react-bootstrap/Button";
 import { MdDashboard } from "react-icons/md";
 import { GrTableAdd } from "react-icons/gr";
+import { IoNewspaperOutline } from "react-icons/io5";
+import { SiNintendogamecube } from "react-icons/si";
+import { TbTextDirectionRtl } from "react-icons/tb";
+import Form from "react-bootstrap/Form";
 
 function App() {
   return (
@@ -18,6 +22,12 @@ function App() {
         <Navbar bg="primary" variant="dark">
           <Container>
             <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+            {/* <Form>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Control type="email" placeholder="Enter email" />
+              </Form.Group>
+            </Form> */}
+            <input placeholder="Search here" style={{ borderRadius: ".3rem" }} />
             <Nav className="me-auto">
               <Nav.Link href="#home">Home</Nav.Link>
               <Nav.Link href="#features">Features</Nav.Link>
@@ -37,9 +47,18 @@ function App() {
             <ListGroup.Item>
               <GrTableAdd /> Tables
             </ListGroup.Item>
-            <ListGroup.Item>Billing</ListGroup.Item>
-            <ListGroup.Item>Virtual Reality</ListGroup.Item>
-            <ListGroup.Item>RTL</ListGroup.Item>
+            <ListGroup.Item>
+              <IoNewspaperOutline />
+              Billing
+            </ListGroup.Item>
+            <ListGroup.Item>
+              <SiNintendogamecube />
+              Virtual Reality
+            </ListGroup.Item>
+            <ListGroup.Item>
+              <TbTextDirectionRtl />
+              RTL
+            </ListGroup.Item>
           </ListGroup>
         </Card>
       </div>
